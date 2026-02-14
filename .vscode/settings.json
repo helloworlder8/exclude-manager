@@ -1,0 +1,44 @@
+{
+  "python.analysis.extraPaths": [
+    ".fq"
+  ],
+  "cursorpyright.analysis.extraPaths": [
+    ".fq"
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/__pycache__": true,
+    "ang": true
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/__pycache__": true,
+    "ang": true
+  },
+  "python.analysis.exclude": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/__pycache__",
+    "ang"
+  ],
+  "cursorpyright.analysis.exclude": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/__pycache__",
+    "ang"
+  ]
+}

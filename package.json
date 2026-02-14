@@ -1,0 +1,57 @@
+{
+  "name": "exclude-manager",
+  "displayName": "Exclude Manager",
+  "description": "Manage exclude patterns and sync to files.exclude, search.exclude, python.analysis.exclude, cursorpyright.analysis.exclude",
+  "version": "0.1.0",
+  "publisher": "exclude-manager",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/helloworlder8/exclude-manager.git"
+  },
+  "keywords": ["exclude", "files", "search", "python", "cursorpyright"],
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onView:excludeManager.list"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Exclude Manager",
+      "properties": {}
+    },
+    "commands": [
+      {
+        "command": "excludeManager.openView",
+        "title": "Open Exclude Manager"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "exclude-manager",
+          "title": "Exclude Manager",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "exclude-manager": [
+        {
+          "type": "webview",
+          "id": "excludeManager.list",
+          "name": "排除项"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "package": "npm run compile && npx --yes @vscode/vsce package --no-dependencies",
+    "publish": "npx --yes @vscode/vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}
